@@ -1,0 +1,102 @@
+item_code,category_code,name_en,name_ar,description_en,description_ar,price,image,modifier_groups,tags,calories,item_type,external_schedule_code,fake_original_price,max_qty,in_stock,is_active
+I1,C1,Chicken Karahi,كراهي دجاج,,,0,,M1,non_veg,,non_veg,,,,,1
+I2,C1,Mutton Karahi,كراهي لحم غنم,,,0,,M2,non_veg,,non_veg,,,,,1
+I3,C1,Chicken White Handi,هاندي دجاج أبيض,,,0,,M3,non_veg,,non_veg,,,,,1
+I4,C1,Chicken Achari Karahi,كراهي دجاج أشاري,,,0,,M4,non_veg,,non_veg,,,,,1
+I5,C1,Chicken Boneless Handi,هاندي دجاج بدون عظم,,,24,,,non_veg,,non_veg,,,,,1
+I6,C1,Charsi Karahi (Special),شارسي كراهي (سبشيال),,,0,,M5,,,,,,,,1
+I7,C1,Chicken Korma,كورما دجاج,,,0,,M6,non_veg,,non_veg,,,,,1
+I8,C1,Mutton Korma,كورما لحم غنم,,,0,,M7,non_veg,,non_veg,,,,,1
+I9,C1,Aalo Qeema,آلو كيما,,,0,,M8,non_veg,,non_veg,,,,,1
+I10,C1,Karela Gosht,كاريلا گوشت,,,16,,,non_veg,,non_veg,,,,,1
+I11,C1,Bhindi Gosht,بامية باللحم,,,16,,,non_veg,,non_veg,,,,,1
+I12,C1,Palak Gosht,سبانخ باللحم,,,16,,,non_veg,,non_veg,,,,,1
+I13,C2,Shahi Daal,دال شاهي ,,,15,,,,,,,,,,1
+I14,C2,Chicken Daal,دال دجاج ,,,15,,,non_veg,,non_veg,,,,,1
+I15,C2,Masoor Daal,دال مسور,,,10,,,,,,,,,,1
+I16,C2,Chana Daal,دال شانا,,,10,,,veg,,veg,,,,,1
+I17,C2,Mash Daal,دال ماش,,,10,,,,,,,,,,1
+I18,C2,Red Lobia,لوبيا حمراء,,,10,,,,,,,,,,1
+I19,C3,Chicken Biryani,برياني دجاج,,,0,,M7,non_veg,,non_veg,,,,,1
+I20,C3,Mutton Biryani,برياني لحم غنم,,,0,,M7,non_veg,,non_veg,,,,,1
+I21,C3,Chicken Pulao,بيلاف دجاج,,,0,,M7,non_veg,,non_veg,,,,,1
+I22,C3,Mutton Pulao,بيلاف لحم غنم,,,0,,M7,non_veg,,non_veg,,,,,1
+I23,C3,Afghani Pulao,بيلاف أفغاني,,,0,,M7,non_veg,,non_veg,,,,,1
+I24,C3,Chana Pulao,بيلاف شانا,,,0,,M9,non_veg,,non_veg,,,,,1
+I25,C3,Fried Rice,أرز مقلي,,,20,,,veg,,veg,,,,,1
+I26,C3,Zarda(Sweet),زاردة ,,,10,,,,,,,,,,1
+I27,C3,Hareesa,هريسة,,,0,,M10,,,,,,,,1
+I28,C4,Aloo Gobi,آلو جوبي,,,0,,M10,veg,,veg,,,,,1
+I29,C4,Aloo Palak,آلو سبانخ ,,,0,,M10,veg,,veg,,,,,1
+I30,C4,Aloo Mutter,آلو ماتر,,,0,,M10,veg,,veg,,,,,1
+I31,C4,Mix Vegetable,خضار مشكل,,,0,,M10,veg,,veg,,,,,1
+I32,C4,Bhindi Masala,بامية ماسالا,,,0,,M11,veg,,veg,,,,,1
+I33,C4,Karela,كاريلا,,,0,,M11,veg,,veg,,,,,1
+I34,C4,Kari Pakora,كاري باكورا,,,0,,M11,,,,,,,,1
+I35,C4,Aloo Shimla,آلو شيملا,,,0,,M10,veg,,veg,,,,,1
+I36,C4,Shalgam Mutter,شلغم ماتر,,,0,,M10,veg,,veg,,,,,1
+I37,C4,khosa,كوسا,,,0,,M10,,,,,,,,1
+I38,C4,Anda Burji,أندا بورجي,,,0,,M12,,,,,,,,1
+I39,C5,Moli Paratha,مولي براتا,,,6,,,,,,,,,,1
+I40,C5,Aloo Paratha,آلو براتا,,,6,,,veg,,veg,,,,,1
+I41,C5,Qeema Paratha,كيما براتا ,,,7,,,non_veg,,non_veg,,,,,1
+I42,C5,Gobhi Paratha,جوبي براتا,,,7,,,,,,,,,,1
+I43,C5,Simple Paratha,براتا سادة,,,2,,,,,,,,,,1
+I44,C5,Single Omelet,أومليت سنجل,,,3,,,egg,,egg,,,,,1
+I45,C5,Double Omelet,أومليت دبل,,,6,,,egg,,egg,,,,,1
+I46,C5,Half Fry Egg,بيض نصف استواء,,,4,,,egg,,egg,,,,,1
+I47,C5,Boiled Egg,بيض مسلوق,,,2,,,egg,,egg,,,,,1
+I48,C5,Chana,شانا ,,,6,,,veg,,veg,,,,,1
+I49,C5,Chicken Chana,شانا دجاج,,,10,,,non_veg,,non_veg,,,,,1
+I50,C5,Brain Masala,مخ ماسالا,,,10,,,non_veg,,non_veg,,,,,1
+I51,C5,Kaleji,كاليجي,,,12,,,non_veg,,non_veg,,,,,1
+I52,C5,Paya,بايا,,,16,,,,,,,,,,1
+I53,C5,Tandoori Roti,روتي تندوري,,,2,,,veg,,veg,,,,,1
+I54,C5,Roghni Naan,روغني نان,,,4,,,veg,,veg,,,,,1
+I55,C5,Garlic Naan,نان بالثوم,,,4,,,veg,,veg,,,,,1
+I56,C5,Butter Naan,نان بالزبدة,,,4,,,veg,,veg,,,,,1
+I57,C5,Simple Nan,نان سادة,,,3,,,,,,,,,,1
+I58,C6,Charcoal Grill,مشوي على الفحم,Assorted marinated meats and chicken grilled over glowing charcoal fire with spices.,تشكيلة متنوعة من اللحوم والدجاج المتبلة والمشوية على الفحم.,0,,M13,non_veg,,non_veg,,,,,1
+I59,C6,Chicken Malai Boti,دجاج مالاي بوتي,,,0,,M14,non_veg,,non_veg,,,,,1
+I60,C6,Chicken Tikka Boti,دجاج تكا بوتي,,,0,,M15,non_veg,,non_veg,,,,,1
+I61,C6,Chicken Leg,فخذ دجاج,,,12,,,non_veg,,non_veg,,,,,1
+I62,C6,Chicken Chest,صدر دجاج,,,14,,,non_veg,,non_veg,,,,,1
+I63,C6,Beef Kabab,كباب لحم بقر,,,0,,M15,non_veg,,non_veg,,,,,1
+I64,C6,Beef Dhaga Kabab Plate,طبق كباب داغا لحم ,,,25,,,non_veg,,non_veg,,,,,1
+I65,C6,Reshmi Kabab,ريشيمي كباب,,,0,,M14,non_veg,,non_veg,,,,,1
+I66,C6,Chapli Kabab,شابلي كباب,,,10,,,non_veg,,non_veg,,,,,1
+I67,C6,Fish Fry,سمك مقلي,,,0,,M16,non_veg,,non_veg,,,,,1
+I68,C6,Fish Grill,سمك مشوي,,,0,,M17,non_veg,,non_veg,,,,,1
+I69,C6,Mix Palter,طبق مشكل ,"Assortment of different grilled meats, marinated in various spices, served hot.",مشويات مشكلة: مجموعة متنوعة من اللحوم المشوية المتبلة ببهارات مختلفة، تُقدم ساخنة,65,,,non_veg,,non_veg,,,,,1
+I70,C6,Tikka Role,رول تكا,,,10,,,,,,,,,,1
+I71,C7,Banana Shake,ميلك شيك موز,,,0,,M18,veg,,veg,,,,,1
+I72,C7,Mango Shake,ميلك شيك مانجو,,,0,,M18,veg,,veg,,,,,1
+I73,C7,Avocado Juice,عصير أفوكادو,,,0,,M18,veg,,veg,,,,,1
+I74,C7,Watermelon Juice,عصير بطيخ,,,0,,M19,veg,,veg,,,,,1
+I75,C7,Orange Juice,عصير برتقال,,,0,,M18,veg,,veg,,,,,1
+I76,C7,Pineapple Juice,عصير أناناس,,,0,,M18,veg,,veg,,,,,1
+I77,C7,Kiwi Juice,عصير كيوي,,,0,,M18,veg,,veg,,,,,1
+I78,C7,Lemon Juice,عصير ليمون,,,0,,M19,veg,,veg,,,,,1
+I79,C7,Lemon Mint Juice,عصير ليمون ونعناع,,,0,,M18,veg,,veg,,,,,1
+I80,C7,Pomegranate Juice,عصير رمان,,,0,,M18,veg,,veg,,,,,1
+I81,C7,Sweet Melon Juice,عصير شمام,,,0,,M18,veg,,veg,,,,,1
+I82,C7,Cocktail Juice,عصير كوكتيل,,,18,,,veg,,veg,,,,,1
+I83,C7,Papaya Juice,عصير بابايا,,,0,,M18,veg,,veg,,,,,1
+I84,C7,Grapes Juice,عصير عنب,,,0,,M18,veg,,veg,,,,,1
+I85,C7,Fruit Salad,سلطة فواكه,,,15,,,veg,,veg,,,,,1
+I86,C7,Cold Drink Small,مشروب غازي صغير,,,4,,,,,,,,,,0
+I87,C7,Cold Drink Big,مشروب غازي كبير,,,6,,,,,,,,,,0
+I88,C7,Water Small,مياه صغيرة,,,1,,,,,,,,,,1
+I89,C7,Water Big,مياه كبيرة,,,2,,,,,,,,,,1
+I90,C8,Black Coffee,قهوة سوداء,,,3,,,veg,,veg,,,,,1
+I91,C8,Fresh Milk Coffee,قهوة بالحليب الطازج,,,4,,,veg,,veg,,,,,1
+I92,C8,Fresh Milk Tea,شاي بالحليب الطازج,,,4,,,veg,,veg,,,,,1
+I93,C8,Green Tea,شاي أخضر,,,2,,,veg,,veg,,,,,1
+I94,C8,Sulaimani Tea,شاي سليماني,,,2,,,veg,,veg,,,,,1
+I95,C8,Karak Tea,شاي كرك,,,2,,,veg,,veg,,,,,1
+I96,C8,Milk,حليب,,,4,,,veg,,veg,,,,,1
+I97,C8,Horlicks,هورليكس,,,3,,,veg,,veg,,,,,1
+I98,C9,Dahi Bahaly,داهي بالي,,,7,,,veg,,veg,,,,,1
+I99,C9,Gol Gappay,جول جابي,,,7,,,,,,,,,,1
+I100,C9,Chana Chat,شانا شات,,,7,,,veg,,veg,,,,,1
+I101,C9,Kher,خير ,,,5,,,,,,,,,,1

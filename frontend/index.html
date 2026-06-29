@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RestOCR - Intelligent Menu Digitizer</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="glow-container">
+        <div class="glow-orb" id="orb-1"></div>
+        <div class="glow-orb" id="orb-2"></div>
+    </div>
+
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-wand-magic-sparkles magic-icon"></i>
+            <span>Rest<span>OCR</span></span>
+        </div>
+        <div class="header-actions">
+            <button id="btn-api-settings" class="btn-secondary" title="Gemini API Settings">
+                <i class="fa-solid fa-key"></i> Gemini API
+            </button>
+            <button id="btn-shutdown" class="btn-danger" title="Close Application">
+                <i class="fa-solid fa-power-off"></i> Exit App
+            </button>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- API Configuration Modal/Drawer -->
+        <div id="api-panel" class="panel card glass hidden">
+            <div class="panel-header">
+                <h3><i class="fa-solid fa-gears"></i> Gemini API Configuration</h3>
+                <button id="btn-close-api" class="btn-close">&times;</button>
+            </div>
+            <div class="panel-body">
+                <p>The application uses Gemini 2.5 Flash to read your menu and translate between English and Arabic. Your API key is stored securely in your local browser storage.</p>
+                <div class="form-group">
+                    <label for="api-key-input">Gemini API Key</label>
+                    <div class="input-with-icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <input type="password" id="api-key-input" placeholder="AIzaSy...">
+                        <button id="btn-toggle-key-visibility" class="btn-icon">
+                            <i class="fa-solid fa-eye"></i>
+                        </button>
+                    </div>
+                    <small>Get a free API key from <a href="https://aistudio.google.com/" target="_blank" rel="noopener">Google AI Studio <i class="fa-solid fa-arrow-up-right-from-square"></i></a></small>
+                </div>
+                <button id="btn-save-api" class="btn-primary">Save API Key</button>
+            </div>
+        </div>
+
+        <!-- Initial Upload View -->
+        <section id="upload-view" class="view-section active">
+            <div class="hero-text">
+                <h1>Bilingual Menu Digitalizer</h1>
+                <p>Upload a restaurant menu in <strong>English</strong> or <strong>Arabic</strong> (as an Image, PDF, or spreadsheet) and instantly generate a formatted Google Sheets / Excel import template.</p>
+            </div>
+
+            <div id="dropzone" class="dropzone glass">
+                <input type="file" id="file-input" accept="image/*,application/pdf,.csv,.xlsx,.xls" hidden>
+                <div class="dropzone-content">
+                    <div class="dropzone-icon">
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                    </div>
+                    <h2>Drag & Drop your menu here</h2>
+                    <p>Supports JPG, PNG, PDF, Excel & CSV files</p>
+                    <button class="btn-primary" id="btn-browse">Browse Files</button>
+                </div>
+            </div>
+
+            <div id="upload-status" class="status-panel glass hidden">
+                <div class="spinner"></div>
+                <div class="status-text">
+                    <h3 id="status-heading">Processing menu document...</h3>
+                    <p id="status-detail">Using Gemini AI for high-fidelity OCR, layout analysis, and translations.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Editor View (Hidden initially) -->
+        <section id="editor-view" class="view-section hidden">
+            <div class="editor-header-bar">
+                <div class="editor-title">
+                    <h2><i class="fa-solid fa-pen-to-square"></i> Review & Refine Menu</h2>
+                    <p>Edit categories, items, prices, and bilingual translations before exporting to the sheet.</p>
+                </div>
+                <div class="editor-actions">
+                    <button id="btn-add-category" class="btn-secondary">
+                        <i class="fa-solid fa-folder-plus"></i> Add Category
+                    </button>
+                    <button id="btn-export-excel" class="btn-success">
+                        <i class="fa-solid fa-file-excel"></i> Export Excel Template
+                    </button>
+                </div>
+            </div>
+
+            <div class="editor-layout">
+                <!-- Categories Sidebar -->
+                <aside class="sidebar glass">
+                    <div class="sidebar-header">
+                        <h3>Categories</h3>
+                    </div>
+                    <ul id="category-list" class="category-list">
+                        <!-- Populated dynamically -->
+                    </ul>
+                </aside>
+
+                <!-- Items Editor Panel -->
+                <section class="editor-panel glass">
+                    <div class="editor-panel-header">
+                        <div class="active-category-info">
+                            <h3 id="active-cat-title-en">Select a category</h3>
+                            <span id="active-cat-title-ar" class="arabic-text"></span>
+                        </div>
+                        <div class="category-edit-actions">
+                            <button id="btn-edit-active-cat" class="btn-icon-text" title="Rename Category">
+                                <i class="fa-solid fa-pencil"></i> Rename Category
+                            </button>
+                            <button id="btn-delete-active-cat" class="btn-icon-text btn-danger-text" title="Delete Category">
+                                <i class="fa-solid fa-trash-can"></i> Delete Category
+                            </button>
+                            <button id="btn-add-item" class="btn-primary btn-sm">
+                                <i class="fa-solid fa-plus"></i> Add Item
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="items-table-wrapper">
+                        <table id="items-table">
+                            <thead>
+                                <tr>
+                                    <th width="5%">#</th>
+                                    <th width="20%">Name (EN)</th>
+                                    <th width="20%">Name (AR)</th>
+                                    <th width="15%">Type</th>
+                                    <th width="15%">Pricing Mode</th>
+                                    <th width="20%">Price Details</th>
+                                    <th width="5%">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="items-table-body">
+                                <!-- Populated dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <!-- Dialog for adding/renaming category -->
+    <div id="category-dialog" class="modal-overlay hidden">
+        <div class="modal card glass">
+            <h3 id="cat-dialog-title">Add Category</h3>
+            <div class="form-group">
+                <label for="cat-input-en">Category Name (English)</label>
+                <input type="text" id="cat-input-en" placeholder="e.g. Hot Beverage">
+            </div>
+            <div class="form-group">
+                <label for="cat-input-ar">Category Name (Arabic)</label>
+                <input type="text" id="cat-input-ar" class="arabic-input" placeholder="e.g. مشروبات ساخنة">
+            </div>
+            <div class="modal-footer">
+                <button id="btn-cancel-cat" class="btn-secondary">Cancel</button>
+                <button id="btn-save-cat" class="btn-primary">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
